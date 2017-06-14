@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Index Page {% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1>In-stock Item</h1>
+		<ul>
+			{% for item in items %}
+				<li>
+					
+					<a href="{% url 'item_detail' item.id%}">
+						{{item.title|capfirst}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>	
+	</div>
+{% endblock %}

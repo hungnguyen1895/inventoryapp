@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html>
+<head>
+	<title>
+		{% block title %} {% endblock %}
+	</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+
+	{% endblock %}
+	<script type="text/javascript" src="{% static 'main.js' %}"></script>
+</body>
+</html>
